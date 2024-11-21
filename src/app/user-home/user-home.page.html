@@ -1,0 +1,31 @@
+<ion-content class="user-home-content">
+  <div class="home-card">
+    <!-- Titre de bienvenue -->
+    <h2 class="home-title">Welcome, User!</h2>
+    <p class="home-subtitle">Explore the features below:</p>
+
+    <!-- Bouton pour le profil -->
+    <ion-button expand="block" shape="round" fill="outline" class="action-button" routerLink="/profile">
+      <ion-icon name="person-outline" slot="start"></ion-icon> Profile
+    </ion-button>
+
+    <!-- Bouton pour les cartes -->
+    <ion-button expand="block" shape="round" fill="outline" class="action-button" routerLink="/maps">
+      <ion-icon name="map-outline" slot="start"></ion-icon> Maps
+    </ion-button>
+
+    <!-- Bouton pour les équipements -->
+    <ion-button expand="block" shape="round" fill="outline" class="action-button" routerLink="/equipment">
+      <ion-icon name="help-circle-outline" slot="start"></ion-icon> Equipment
+    </ion-button>
+
+    <!-- Bouton de déconnexion -->
+    <ion-button expand="block" shape="round" class="logout-button" (click)="logout()">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon> Logout
+    </ion-button>
+    <div class="image-container">
+      <ion-img src="assets/logo.jpg" alt="Login Icon"></ion-img>
+    </div>
+
+  </div>
+</ion-content>

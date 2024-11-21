@@ -1,0 +1,43 @@
+<ion-content class="login-content ion-padding" style="background: url('assets/images/background.jpg') no-repeat center center / cover;">
+  <!-- Overlay pour lisibilité -->
+  <div class="background-overlay"></div>
+
+  <!-- Conteneur principal avec coins arrondis -->
+  <div class="login-card">
+    <!-- En-tête -->
+    <h2 class="app-title">Login Now</h2>
+    <p class="subtitle">Please login to continue using our app.</p>
+
+    <!-- Section de connexion via réseaux sociaux -->
+   
+    <div class="image-container">
+      <ion-img src="assets/hel.png" alt="Login Icon"></ion-img>
+    </div>
+
+    <!-- Champ de saisie pour l'email -->
+    <ion-item lines="none" class="input-item">
+      <ion-input [(ngModel)]="email" type="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <!-- Champ de saisie pour le mot de passe -->
+    <ion-item lines="none" class="input-item">
+      <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+      <ion-icon slot="end" name="eye-outline" (click)="togglePasswordVisibility()"></ion-icon>
+    </ion-item>
+
+    <!-- Lien "Forgot Password" -->
+    <div class="forgot-password">
+      <a routerLink="/forgot-password">Forgot Password?</a>
+    </div>
+
+    <!-- Bouton de connexion -->
+    <ion-button expand="block" class="login-button" (click)="login()">
+      Login
+    </ion-button>
+
+    <!-- Lien pour s'inscrire -->
+    <p class="sign-up-text">
+      Don’t have an account? <a routerLink="/signup">Sign up</a>
+    </p>
+  </div>
+</ion-content>

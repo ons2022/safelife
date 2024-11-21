@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="admin-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Edit User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="edit-user-content">
+  <ion-card class="edit-user-card">
+    <!-- Title and Subtitle for the Form -->
+    <ion-card-header>
+      <ion-card-title class="form-title">Edit User</ion-card-title>
+      <p class="form-subtitle">Update the user's details below.</p>
+    </ion-card-header>
+
+    <!-- Form Inputs -->
+
+    <!-- First Name -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="person-outline"></ion-icon> First Name
+      </ion-label>
+      <ion-input [(ngModel)]="user.firstName" placeholder="Enter first name"></ion-input>
+    </ion-item>
+
+    <!-- Last Name -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="person-outline"></ion-icon> Last Name
+      </ion-label>
+      <ion-input [(ngModel)]="user.lastName" placeholder="Enter last name"></ion-input>
+    </ion-item>
+
+    <!-- Address -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="home-outline"></ion-icon> Address
+      </ion-label>
+      <ion-input [(ngModel)]="user.address" placeholder="Enter address"></ion-input>
+    </ion-item>
+
+    <!-- Phone Number -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="call-outline"></ion-icon> Phone Number
+      </ion-label>
+      <ion-input [(ngModel)]="user.phoneNumber" type="tel" placeholder="Enter phone number"></ion-input>
+    </ion-item>
+
+    <!-- Age -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="calendar-outline"></ion-icon> Age
+      </ion-label>
+      <ion-input [(ngModel)]="user.age" type="number" placeholder="Enter age"></ion-input>
+    </ion-item>
+
+    <!-- Gender -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="male-female-outline"></ion-icon> Gender
+      </ion-label>
+      <ion-select [(ngModel)]="user.gender" placeholder="Select gender">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+        <ion-select-option value="other">Other</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Date of Birth -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="calendar-outline"></ion-icon> Date of Birth
+      </ion-label>
+      <ion-datetime [(ngModel)]="user.dateOfBirth" display-format="MM/DD/YYYY" placeholder="Select date of birth"></ion-datetime>
+    </ion-item>
+
+    <!-- Email -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="mail-outline"></ion-icon> Email
+      </ion-label>
+      <ion-input [(ngModel)]="user.email" type="email" placeholder="Enter email"></ion-input>
+    </ion-item>
+
+    <!-- Password -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="lock-closed-outline"></ion-icon> Password
+      </ion-label>
+      <ion-input [(ngModel)]="user.password" type="password" placeholder="Enter password"></ion-input>
+    </ion-item>
+
+    <!-- Role -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="shield-checkmark-outline"></ion-icon> Role
+      </ion-label>
+      <ion-select [(ngModel)]="user.role" placeholder="Select role">
+        <ion-select-option value="user">User</ion-select-option>
+        <ion-select-option value="admin">Admin</ion-select-option>
+        <ion-select-option value="moderator">Moderator</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Additional Notes -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="document-outline"></ion-icon> Notes
+      </ion-label>
+      <ion-textarea [(ngModel)]="user.notes" placeholder="Add any additional notes"></ion-textarea>
+    </ion-item>
+
+    <!-- Action Buttons -->
+    <ion-button expand="full" (click)="updateUser()" shape="round" class="update-button">
+      UPDATE USER
+    </ion-button>
+
+    <ion-button expand="full" routerLink="/users" shape="round" fill="outline" color="secondary" class="back-button">
+      BACK TO USERS
+    </ion-button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-content class="admin-home-content">
+  <ion-card class="admin-card">
+    <!-- Logo Section -->
+    <ion-img src="assets/logo.jpg" alt="Healthcare Logo" class="logo-image"></ion-img>
+
+    <!-- Header Section -->
+    <ion-card-header class="header-section">
+      <ion-card-title class="welcome-title">Welcome, Admin!</ion-card-title>
+      <p class="welcome-subtitle">Manage the healthcare services below:</p>
+    </ion-card-header>
+
+    <!-- Card Content with Action Buttons -->
+    <ion-card-content>
+      <!-- Profile Button -->
+      <ion-button expand="full" shape="round" fill="outline" color="primary" class="action-button" routerLink="/profile">
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon> Profile
+      </ion-button>
+
+      <!-- Manage Patients Button -->
+      <ion-button expand="full" shape="round" fill="outline" color="primary" class="action-button" routerLink="/users">
+        <ion-icon name="people-outline" slot="start"></ion-icon> Manage Patients
+      </ion-button>
+
+      <!-- Manage Equipment Button -->
+      <ion-button expand="full" shape="round" fill="outline" color="primary" class="action-button" routerLink="/equipment">
+        <ion-icon name="medkit-outline" slot="start"></ion-icon> Manage Equipment
+      </ion-button>
+
+      <!-- Facility Locations Button -->
+      <ion-button expand="full" shape="round" fill="outline" color="primary" class="action-button" routerLink="/maps">
+        <ion-icon name="navigate-outline" slot="start"></ion-icon> Facility Locations
+      </ion-button>
+
+      <!-- View Reports Button -->
+      <ion-button expand="full" shape="round" fill="outline" color="primary" class="action-button" routerLink="/reports">
+        <ion-icon name="clipboard-outline" slot="start"></ion-icon> View Reports
+      </ion-button>
+    </ion-card-content>
+
+    <!-- Logout Button -->
+    <ion-button expand="full" shape="round" color="danger" class="logout-button" (click)="logout()">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon> Logout
+    </ion-button>
+  </ion-card>
+</ion-content>

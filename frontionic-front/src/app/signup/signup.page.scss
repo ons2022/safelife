@@ -1,0 +1,82 @@
+/* Centrage du contenu et couleur de fond */
+.signup-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f7f8fc;
+  text-align: center;
+}
+
+/* Carte d'inscription avec coins arrondis et ombre */
+.signup-card {
+  background-color: white;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style pour le titre et le sous-titre */
+.app-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #6b5aed;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  color: #8a94a6;
+  margin-bottom: 20px;
+}
+
+/* Style des champs de saisie */
+.input-item {
+  width: 100%;
+  max-width: 340px;
+  margin: 10px 0;
+  --background: #f0f2f5;
+  --highlight-color-focused: #6b5aed;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Bouton d'inscription */
+.signup-button {
+  width: 100%;
+  max-width: 340px;
+  --background: #6b5aed;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Bouton retour à la connexion */
+.login-button {
+  width: 100%;
+  max-width: 340px;
+  --border-color: #6b5aed;
+  color: #6b5aed;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Texte pour la redirection vers la connexion */
+.already-have-account {
+  font-size: 0.9em;
+  color: #8a94a6;
+  margin-top: 20px;
+}
+
+.already-have-account a {
+  color: #6b5aed;
+  font-weight: bold;
+  text-decoration: none;
+}

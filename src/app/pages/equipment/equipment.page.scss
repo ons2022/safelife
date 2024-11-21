@@ -1,0 +1,75 @@
+/* Centered and Smaller Searchbar */
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.searchbar {
+  width: 80%; /* Adjust width to make it smaller */
+  max-width: 500px;
+  --background: #e0e4eb;
+  border-radius: 8px;
+}
+
+/* White background for side menu */
+ion-menu .menu-content {
+  --background: #ffffff; /* Set background to white */
+  color: #333; /* Dark text for contrast on white */
+}
+
+ion-menu .menu-content ion-item {
+  --color: #6b5aed; /* Theme color for icons and text */
+}
+
+ion-toolbar[color="light"] {
+  --background: #ffffff;
+}
+
+/* Equipment list item styling */
+.list-item {
+  --background: white;
+  border-radius: 8px;
+  margin: 5px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Avatar styling for equipment image */
+.equipment-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.equipment-avatar ion-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon styling for equipment details */
+.detail-icon {
+  margin-right: 8px;
+  color: #6b5aed;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+/* Action button styling */
+.action-button {
+  --color: #6b5aed;
+}
+
+.action-button[color="danger"] {
+  --color: #ff4d4d;
+}
+
+/* Floating action button styling */
+.fab-button {
+  --background: #6b5aed;
+  color: white;
+}

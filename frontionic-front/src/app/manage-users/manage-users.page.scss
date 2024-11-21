@@ -1,0 +1,93 @@
+/* General Content Background */
+ion-content {
+  --background: #f7f8fc;
+  padding: 0 16px;
+}
+
+/* Toolbar */
+ion-toolbar {
+  --background: #ffffff;
+  color: #02000c;
+}
+
+/* Centered and Smaller Searchbar */
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #ffffff;
+}
+
+.searchbar {
+  --background: #f0f2f5;
+  --ion-color-primary: #6b5aed;
+  width: 80%; /* Adjust width as needed */
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+/* Card for User List */
+.user-list-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 1px 1px;
+}
+
+/* User List Styling */
+.user-list {
+  background-color: white;
+}
+
+/* List Item Styling */
+.list-item {
+  --background: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark Gray Avatar with White Person Icon */
+.avatar {
+  width: 60px;           /* Set a fixed width for uniform size */
+  height: 60px;          /* Set a fixed height for uniform size */
+  border-radius: 50%;    /* Makes the avatar circular */
+  overflow: hidden;  
+    /* Ensures any overflow is hidden to maintain the circular shape */
+}
+
+.avatar ion-img {
+  width: 100%;           /* Make the image fill the avatar container */
+  height: 100%;          /* Ensure the height also fills the container */
+  object-fit: cover;  
+  /* Scale the image to cover the avatar area without distortion */
+}
+
+
+.avatar ion-icon {
+  color: white;
+  font-size: 24px;
+}
+
+/* Action Buttons (Edit & Delete) */
+.action-button {
+  font-size: 1.2em;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.edit-button {
+  --color: #6b5aed;
+}
+
+.delete-button {
+  --color: #ff4d4d;
+}
+
+/* Floating Action Button for Adding Users */
+.fab-button {
+  --background: #6b5aed;
+  color: white;
+}

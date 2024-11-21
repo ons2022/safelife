@@ -1,0 +1,58 @@
+/* Main Content Background */
+.edit-user-content {
+  --background: #f7f8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Card Styling */
+.edit-user-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  background-color: white;
+}
+
+/* Form Title and Subtitle */
+.form-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #6b5aed;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 0.9em;
+  color: #8a94a6;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Input Item Styling */
+.input-item {
+  margin-top: 10px;
+  --background: #f0f2f5;
+  --highlight-color-focused: #6b5aed;
+  border-radius: 5px;
+}
+
+/* Action Buttons */
+.update-button {
+  --background: #6b5aed;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.back-button {
+  --border-color: #6b5aed;
+  color: #6b5aed;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}

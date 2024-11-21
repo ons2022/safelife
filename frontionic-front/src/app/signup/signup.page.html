@@ -1,0 +1,95 @@
+<ion-content [fullscreen]="true" class="signup-content">
+  <div class="signup-card">
+    <!-- Titre et sous-titre -->
+    <h2 class="app-title">Create Account</h2>
+    <p class="subtitle">Please sign up to continue using our app.</p>
+    <div class="image-container">
+      <ion-img src="assets/hel.png" alt="Login Icon"> <style>ion-img {
+        justify-content: center;
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        margin-left: 15%;
+      }</style> </ion-img>
+    </div>
+
+    <!-- Champ pour le prénom -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="person-outline"></ion-icon> First Name
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.firstName" name="firstName" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Champ pour le nom de famille -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="person-outline"></ion-icon> Last Name
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.lastName" name="lastName" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Champ pour l'adresse -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="home-outline"></ion-icon> Address
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.address" name="address" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Champ pour le numéro de téléphone -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="call-outline"></ion-icon> Phone Number
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.phoneNumber" name="phoneNumber" type="tel" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Champ pour l'âge -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="calendar-outline"></ion-icon> Age
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.age" name="age" type="number" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Champ pour l'email -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="mail-outline"></ion-icon> Email
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.email" name="email" type="email" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Champ pour le mot de passe -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="lock-closed-outline"></ion-icon> Password
+      </ion-label>
+      <ion-input [(ngModel)]="userModel.password" name="password" type="password" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Sélecteur de rôle -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="shield-checkmark-outline"></ion-icon> 
+      </ion-label>
+      <ion-select [(ngModel)]="userModel.role" placeholder="">
+        <ion-select-option value="user">User</ion-select-option>
+        <ion-select-option value="admin">Admin</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Bouton d'inscription -->
+    <ion-button expand="block" (click)="signup()" shape="round" class="signup-button">
+      SIGN UP
+    </ion-button>
+    
+    <!-- Bouton pour revenir à la connexion -->
+    <ion-button expand="block" routerLink="/login" shape="round" fill="outline" color="secondary" class="login-button">
+      BACK TO LOGIN
+    </ion-button>
+
+    <p class="already-have-account">Already have an account? <a routerLink="/login">Login</a></p>
+  </div>
+</ion-content>

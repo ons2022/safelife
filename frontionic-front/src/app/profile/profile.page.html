@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="none">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="profile-content">
+  <h2 class="app-title">EDIT YOUR PROFILE </h2>
+  <ion-card class="profile-card">
+    <!-- Profile Image (optional) -->
+    <ion-img src="assets/logo2.jpg" class="profile-image"></ion-img>
+    
+    <!-- Subtitle Text -->
+    <p class="profile-subtitle">Update your profile details below.</p>
+
+    <!-- First Name Input -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="person-outline"></ion-icon> First Name
+      </ion-label>
+      <ion-input [(ngModel)]="profile.firstName" name="firstName" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Last Name Input -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="person-outline"></ion-icon> Last Name
+      </ion-label>
+      <ion-input [(ngModel)]="profile.lastName" name="lastName" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Address Input -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="home-outline"></ion-icon> Address
+      </ion-label>
+      <ion-input [(ngModel)]="profile.address" name="address" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Phone Number Input -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="call-outline"></ion-icon> Phone Number
+      </ion-label>
+      <ion-input [(ngModel)]="profile.phoneNumber" name="phoneNumber" type="tel" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Age Input -->
+    <ion-item lines="none" class="input-item">
+      <ion-label position="floating">
+        <ion-icon name="calendar-outline"></ion-icon> Age
+      </ion-label>
+      <ion-input [(ngModel)]="profile.age" name="age" type="number" placeholder=""></ion-input>
+    </ion-item>
+
+    <!-- Update Profile Button -->
+    <ion-button expand="block" (click)="updateProfile()" shape="round" class="update-button">
+      UPDATE PROFILE
+    </ion-button>
+
+    <!-- Back to Home Button (Admin) -->
+    <ion-button *ngIf="profile.role === 'admin'" expand="block" routerLink="/admin-home" shape="round" fill="outline" color="secondary" class="home-button">
+      BACK TO HOME
+    </ion-button>
+
+    <!-- Back to Home Button (User) -->
+    <ion-button *ngIf="profile.role === 'user'" expand="block" routerLink="/user-home" shape="round" fill="outline" color="secondary" class="home-button">
+      BACK TO HOME
+    </ion-button>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,83 @@
+<!-- White Side Menu -->
+<ion-menu contentId="main-content" menuId="equipment-menu" side="start">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="menu-content">
+    <ion-list>
+      <ion-item routerLink="/admin-home" routerDirection="root">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        <ion-label>Admin Home</ion-label>
+      </ion-item>
+      <ion-item routerLink="/users" routerDirection="root">
+        <ion-icon name="people-outline" slot="start"></ion-icon>
+        <ion-label>Manage Users</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="equipment-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Manage Equipment</ion-title>
+  </ion-toolbar>
+
+  <!-- Centered and Smaller Searchbar -->
+  <div class="searchbar-container">
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchEquipment()" class="searchbar"></ion-searchbar>
+  </div>
+</ion-header>
+
+<ion-content id="main-content">
+  <ion-list>
+    <ion-item *ngFor="let equipment of equipmentList" class="list-item">
+      <!-- Equipment Image -->
+      <ion-avatar slot="start" class="equipment-avatar">
+        <ion-img src="assets/staf.png"></ion-img>
+      </ion-avatar>
+  
+      <!-- Equipment Details with Icons -->
+      <ion-label>
+        <h2>{{ equipment.name }}</h2>
+  
+        <!-- Functionality with Icon -->
+        <p>
+          <ion-icon name="settings-outline" class="detail-icon"></ion-icon>
+          Functionality: {{ equipment.functionalityDescription }}
+        </p>
+  
+        <!-- Location with Icon -->
+        <p>
+          <ion-icon name="location-outline" class="detail-icon"></ion-icon>
+          Location: {{ equipment.locationDescription }}
+        </p>
+  
+        <!-- Contact with Icon -->
+        <p>
+          <ion-icon name="call-outline" class="detail-icon"></ion-icon>
+          Contact: {{ equipment.contactPhone }}
+        </p>
+      </ion-label>
+  
+      <!-- Edit and Delete Buttons -->
+      <ion-button fill="clear" color="primary" (click)="editEquipment(equipment._id)" class="action-button">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" color="danger" (click)="deleteEquipment(equipment._id)" class="action-button">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  
+  <!-- Floating Action Button to Add New Equipment -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addEquipment()" color="primary" class="fab-button">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

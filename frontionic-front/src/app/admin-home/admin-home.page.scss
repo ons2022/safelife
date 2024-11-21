@@ -1,0 +1,73 @@
+.admin-home-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f0f4f8; /* Light blue-gray background for healthcare */
+  text-align: center;
+  padding: 16px;
+}
+
+/* Card styling for the admin home */
+.admin-card {
+  background-color: white;
+  width: 100%;
+  max-width: 340px; /* Smaller width for a clean, focused look */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo image styling */
+.logo-image {
+  width: 200px;          
+  height: 200px;         /* Ensure it stays square */
+  border-radius: 50%;   /* Circular logo */
+  object-fit: cover;    /* Ensures the logo scales properly */
+  margin-bottom: 5px;  /* Space below logo */
+}
+
+/* Header Section Styling */
+.header-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #4285f4; /* Calming blue for healthcare */
+}
+
+.welcome-subtitle {
+  color: #6b5aed;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+/* Action buttons for navigation */
+.action-button {
+  width: 100%;
+  max-width: 300px;
+  --border-color: #6b5aed; /* Outline color for buttons */
+  color: #6b5aed;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 12px 0;
+}
+
+/* Logout button styling */
+.logout-button {
+  width: 100%;
+  max-width: 300px;
+  --background: #ff4d4d; /* Red color for logout */
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 12px 0;
+}

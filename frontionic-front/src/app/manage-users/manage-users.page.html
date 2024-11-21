@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="admin-menu"></ion-menu-button>
+    </ion-buttons>
+  
+  </ion-toolbar>
+
+  <!-- Centered Searchbar for Filtering Users -->
+  <div class="searchbar-container">
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="filterUsers()" class="searchbar"></ion-searchbar>
+  </div>
+</ion-header>
+
+<ion-content>
+  <!-- Card wrapping the User List -->
+  <ion-card class="user-list-card">
+    <ion-card-header>
+      <ion-card-title>Users List</ion-card-title>
+    </ion-card-header>
+
+    <!-- User List -->
+    <ion-list class="user-list">
+      <ion-item *ngFor="let user of filteredUsers" class="list-item">
+        <ion-avatar slot="start" class="avatar">
+          <ion-img src="assets/avatar.png"></ion-img>
+        </ion-avatar>
+        
+
+        <!-- User Details -->
+        <ion-label>
+          <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+          <p>Email: {{ user.email }}</p>
+          <p>Role: {{ user.role }}</p>
+        </ion-label>
+
+        <!-- Edit Button -->
+        <ion-button fill="clear" color="primary" (click)="editUser(user)" class="action-button edit-button">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-button>
+
+        <!-- Delete Button -->
+        <ion-button fill="clear" color="danger" (click)="deleteUser(user._id)" class="action-button delete-button">
+          <ion-icon slot="icon-only" name="trash-bin-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <!-- Floating Action Button for Adding a New User -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addUser()" color="primary" class="fab-button">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
